@@ -40,7 +40,8 @@ function App() {
         {movies.map((movie) => {
           return (
             <MovieBox
-              key={movie.id}
+              className={`box-${movie.episode_id.toString()}`}
+              key={movie.episode_id}
               title={movie.title}
               releaseDate={movie.release_date}
               openCrawl={movie.opening_crawl}
